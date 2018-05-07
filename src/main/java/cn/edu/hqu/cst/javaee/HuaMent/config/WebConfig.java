@@ -36,22 +36,4 @@ public class WebConfig extends WebMvcConfigurerAdapter{
 		// TODO Auto-generated method stub
 		configurer.enable();
 	}
-
-
-    @Bean
-    public HttpMessageConverter<String> responseBodyConverter() {
-    	StringHttpMessageConverter converter = new StringHttpMessageConverter(Charset.forName("UTF-8"));         
-    	return converter;     
-    }
-    
-	@Override
-	public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-		// TODO Auto-generated method stub
-		
-		super.configureMessageConverters(converters);
-		converters.add(responseBodyConverter());
-	}
-	
-
-	
 }
